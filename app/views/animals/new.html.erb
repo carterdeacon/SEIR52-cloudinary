@@ -1,0 +1,11 @@
+<h1>New animal</h1>
+
+<%= form_for(@animal, :html => {:multipart => true}) do |f| %>
+    <%= f.label "Animal Name: " %>
+    <%= f.text_field :name %>
+
+    <%= f.label "Animal Image: " %>
+    <%= f.cl_image_upload :image %>
+
+    <%= f.submit %>
+<% end %>
